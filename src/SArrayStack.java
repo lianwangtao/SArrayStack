@@ -15,7 +15,10 @@ public class SArrayStack<E> {
      
   // *** required StackADT methods ***
     
-    // add items
+    /**
+     * Push: push an item to the top of the stack
+     * @param ob: the item to be added
+     */
     public void push(E ob) { 
     	if (items.length == numItems) {
     		expendArray();
@@ -24,6 +27,9 @@ public class SArrayStack<E> {
     	numItems++;
     }  
 
+    /**
+     * expendArray: a private helper method to expand the original array
+     */
     private void expendArray() {
 		// Expand Array when the item list is full
     	@SuppressWarnings("unchecked")
@@ -37,6 +43,11 @@ public class SArrayStack<E> {
 	}
 
 	// remove items
+    /**
+     * pop: pop off the last item on the stack 
+     * @return E: the last item on the stack
+     * @throws EmptyStackException
+     */
     public E pop() throws EmptyStackException { 
     	//Check if the stack is empty
     	if (numItems == 0) throw new EmptyStackException("The Stack is Empty!");
@@ -47,6 +58,11 @@ public class SArrayStack<E> {
     }
 
     // other methods
+    /**
+     * peek: peek at the last item on the stack without removing it
+     * @return E: the last item on the stack
+     * @throws EmptyStackException
+     */
     public E peek() throws EmptyStackException {  
     	//Check if the stack is empty
     	if (numItems == 0) throw new EmptyStackException("The Stack is Empty!");
@@ -54,6 +70,10 @@ public class SArrayStack<E> {
     		return items[numItems - 1];
     	}
     }    
+    /**
+     * isEmpty: check is the stack is empty
+     * @return true if the stack is empty, false otherwise
+     */
     public boolean isEmpty() {
     	return (numItems == 0);
     }  
