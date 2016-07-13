@@ -1,3 +1,4 @@
 /EmptyStackException.class
 /SArrayStack.class
 /SArrayQueue.class
+/EmptyQueueException.class
