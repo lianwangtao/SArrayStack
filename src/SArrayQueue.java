@@ -96,4 +96,12 @@ public class SArrayQueue<E> {
 	public boolean isEmpty() {
 		return (numItems == 0);
 	}
+	
+	/**
+     * Check the size of the queue
+     * @return the size
+     */
+    public int size() {
+    	return numItems;
+    }
 }

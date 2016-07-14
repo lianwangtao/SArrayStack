@@ -77,4 +77,12 @@ public class SArrayStack<E> {
     public boolean isEmpty() {
     	return (numItems == 0);
     }  
+    
+    /**
+     * Check the size of the stack
+     * @return the size
+     */
+    public int size() {
+    	return numItems;
+    }
 }
