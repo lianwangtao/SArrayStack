@@ -32,8 +32,10 @@ public class SArrayQueue<E> {
 		if (items.length == numItems) {
 			expendArray();
 		}
-		//increment the rearIndex
-		rearIndex = incrementIndex(rearIndex);
+		if (numItems != 0) {
+			//increment the rearIndex
+			rearIndex = incrementIndex(rearIndex);
+		}
 		
 		//Add the item at the rear end of the queue
 		items[rearIndex] = item;
@@ -84,6 +86,7 @@ public class SArrayQueue<E> {
 		if (numItems == 0) throw new EmptyQueueException();
 		//Return the first item in the array and update the index
 		else {
+			numItems--;
 			return items[frontIndex];
 		}
 	}
