@@ -1,6 +1,1 @@
-/EmptyStackException.class
-/SArrayStack.class
-/SArrayQueue.class
-/EmptyQueueException.class
-/Test.class
-/Node.class
+/SLinkedStack.class
